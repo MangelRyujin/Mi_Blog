@@ -4,7 +4,7 @@
 
 export function ContacForm(){
     return (
-        <section className="container">
+        <section id="contact" className="container">
             <div className="box">
                 <div className="form">
                     <h2>Contact</h2>

@@ -16,10 +16,10 @@ export function Navigation(){
             </a>
 
             <ul>
-                <li><a  href='/'>Home</a></li>
-                <li><a href='/'>About me</a></li>
-                <li><a href='/'>Works</a></li>
-                <li><a href='/'>Contact</a></li>
+                <li><a href='/'>Home</a></li>
+                <li><a href='#about_me'>About me</a></li>
+                <li><a href='#works'>Works</a></li>
+                <li><a href='#contact'>Contact</a></li>
             </ul>
         </nav>
     )
