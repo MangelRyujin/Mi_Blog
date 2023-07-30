@@ -1,12 +1,12 @@
 
 
-import dog from '../assets/me_avatar.jpg'
+import avatar from '../assets/me_avatar.jpg'
 
 export function SectionMe(){
     return (
         <section id='about_me' className="me_container">
             <div className='my_img'>
-                <img src={dog} alt="" />
+                <img src={avatar} alt="" />
             </div>
             <div className='my_information'>
                 <h2>Miguel Angel Fernández Rodríguez</h2>

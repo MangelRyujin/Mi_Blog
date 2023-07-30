@@ -12,6 +12,7 @@ html{
   box-sizing: border-box;
   /* font-size: 62.5%; */
   padding: 0px;
+  scroll-behavior: smooth;
 }
 
 
@@ -25,6 +26,7 @@ body{
   min-height: 100vh;
   background:  #000000;
   
+  
 }
 
 /* Navbar */
@@ -37,6 +39,7 @@ nav{
   width: 100%;
   z-index: 10000;
   animation: animatenav  2s linear infinite;
+  
 }
 
 @keyframes animatenav{
@@ -79,21 +82,23 @@ nav ul li{
   line-height: 100px;
   margin: 0 10px;
   
+  
 }
 
 nav ul li a{
-  
   color: #1815aa;
-  padding: 0 10px;
-  text-transform: uppercase;
-  font-weight: 800;
-  transition: .5s;
-
+  transition: all .5s;  
 }
+
+
+
+
 
 li a:hover{
   color: #7e1ecc;
+  
 }
+
 
 
 .checkbtn{
@@ -120,6 +125,7 @@ li a:hover{
 
   nav ul li a{ 
     font-size: 16px;
+    
   }
   
   
@@ -173,6 +179,7 @@ li a:hover{
   height: 520px;
   color: #fff;
   background: #000000;
+  
 }
 
 
@@ -243,6 +250,7 @@ li a:hover{
 
 h2{
   text-align: center;
+  
   color: #1815aa;
   font-size: 35px;
   animation: animateh2  3s linear infinite;
@@ -251,12 +259,15 @@ h2{
 @keyframes animateh2{
   0%{
     color: #1815aa;
+    
   }
   50%{
     color: #7e1ecc;
+   
   }
   100%{
     color: #1815aa;
+    
   }
 
 }
@@ -582,13 +593,18 @@ h2{
   display: flex;
   width: 200px;
   height: 250px;
-  
-  
+  background: transparent;
 }
 
 .my_img img{
   width: 100%;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: #7e1ecc 0px 3px -9999999px 0px;
+  
+
 }
+
 
 .my_life{
   margin: 10px;
@@ -731,7 +747,7 @@ h2{
   height: 300px;
   justify-content: center;
   overflow: hidden;
-  padding-top: 50px;
+  padding-top: 34px;
   border-radius: 50%;
   box-shadow: #7e1ecc 0px 0px 999999px 90px;
   transition: 2s;
@@ -739,8 +755,10 @@ h2{
   
 }
 
+
+
 .slider{
-  scale: .9;
+  transform: scale(0.7);
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -757,7 +775,7 @@ h2{
 
 .tools:hover .slider
 {
-  scale: 1.2;  
+  transform: scale(.9);
 }
 
 
@@ -770,7 +788,8 @@ h2{
 
 .tools h2{
   display: block;
-  font-size: 25px;
+  /* transform: translateY(20px); */
+  font-size: 35px;
 }
 
 
@@ -780,7 +799,7 @@ h2{
   align-items: center;
   justify-content: center;
   margin: 35px;
-  margin-top: 30px;
+  margin-top: 0px;
   background: url(assets/react.png) no-repeat ;
   
 }
@@ -792,7 +811,7 @@ h2{
   align-items: center;
   justify-content: center;
   margin: 35px;
-  margin-top: 30px;
+  margin-top: 0px;
   background: url(assets/html5.png) no-repeat ;
 }
 
@@ -802,7 +821,7 @@ h2{
   align-items: center;
   justify-content: center;
   margin: 35px;
-  margin-top: 30px;
+  margin-top: 0px;
   background: url(assets/css.png) no-repeat ;
   
 }
@@ -814,7 +833,7 @@ h2{
   align-items: center;
   justify-content: center;
   margin: 35px;
-  margin-top: 30px;
+  margin-top: 0px;
   background: url(assets/python.png) no-repeat ;
 }
 
@@ -824,7 +843,7 @@ h2{
   align-items: center;
   justify-content: center;
   margin: 35px;
-  margin-top: 30px;
+  margin-top: 0px;
   background: url(assets/django.png) no-repeat ;
 }
 
@@ -834,7 +853,7 @@ h2{
   align-items: center;
   justify-content: center;
   margin: 35px;
-  margin-top: 30px;
+  margin-top: 0px;
   background: url(assets/git.png) no-repeat ;
 }
 
@@ -865,21 +884,22 @@ h2{
   .tools-container .tools{
     width: 280px;
     height: 280px;
+    transform: scale(.7);
   }
 
    .slider{
-    scale: .85;
-    margin-top: -20px;
-    transition: all 1.5s;
+    transform: scale(0.7);
+    
+    transition: all 1s;
   }
   .tools-container .tools:hover .slider{
-    scale: 1.2;
+    transform: scale(.9);
   }
 
-}
+  .works{
+    padding-top: 100px;
+  }
 
-.works{
- padding-top: 50px;
 }
 
 
@@ -903,10 +923,11 @@ h2{
   background: #000000;
   border-radius: 8px;
   overflow: hidden;
-  scale: 0.85;
+  transform: scale(0.85);
   transition: 1s;
   opacity: .7;
-  
+  margin: 20px;
+
 }
 
 .box-card::before{
@@ -919,7 +940,6 @@ h2{
   background: linear-gradient(0deg, transparent, #1c19df);
   transform-origin: bottom right;
   animation: animate  3s linear infinite;
-  opacity: .8;
 }
 
 
@@ -935,11 +955,12 @@ h2{
   transform-origin: bottom right;
   animation: animate  3s linear infinite;
   animation-delay: -1.5s;
+
 }
 
 
 .box-card:hover{
-  scale: 1;
+  transform: scale(1);
   opacity: 1;
 }
 
@@ -948,12 +969,12 @@ h2{
 .card{
   position: absolute;
   inset: 5px;
-  
   display: flex;
   flex-direction: column;
   background: #000000;
   z-index: 10;
   overflow: hidden;
+  border-radius: 8px;
 }
 
 
@@ -961,7 +982,7 @@ h2{
   position: relative;
   width: 100%;
   height: 350px;
-
+  border-radius: 8px;
 }
 
 
@@ -970,6 +991,7 @@ h2{
   width: 100%;
   height: 350px;
   transition: 1s;
+  border-radius: 8px;
 }
 
 .card-detail{
